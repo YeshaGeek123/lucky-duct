@@ -24,7 +24,7 @@
 <!-- End of Main Banner -->
 
 <!-- Start of About Us -->
-<section class="about-us-sec">
+<section class="about-us-sec" id="about-us">
     <div class="container">
         <div class="about-wp">
             <div class="row align-items-center">
@@ -52,7 +52,7 @@
     <section class="service-title-sec bg-img" style="background-image: url('<?php the_field('home_our_service_background_image'); ?>');">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-6">
                     <div class="service-title-content white-text">
                         <h2 class="h2-title"><?php the_field('home_our_service_main_title'); ?></h2>
                     </div>
@@ -180,3 +180,81 @@
     </div>
 </section>
 <!-- End of Gallery -->
+
+<!-- Start of Helpful -->
+<section class="helpful-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="helpful-content">
+                    <div class="text">
+                        <span class="icon">
+                            <img width="26" height="26" src="<?php echo home_url(); ?>/wp-content/themes/lucky-duct/assets/images/helpful-icon.svg" alt="Helpful">
+                        </span>
+                        <h3 class="h3-title"><?php the_field('home_helpful_information_title'); ?></h3>
+                        <p><?php the_field('home_helpful_information_sub_title'); ?></p>
+                    </div>
+                    <div class="help-btn">
+                        <a href="<?php the_field('home_helpful_information_page_link'); ?>" title="<?php the_field('home_helpful_information_title'); ?>, Learn More" class="sec-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Helpful -->
+
+<!-- Start of Testimonial -->
+<section class="testimonial-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sec-title text-center">
+                    <h2 class="h2-title"><?php the_field('testimonial_title'); ?></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row testimonial-slider">
+            <?php
+           
+            $testimonial_list = get_posts(array(
+                'post_type' => 'testimonials',
+                'post_status' => 'publish',
+                'order'          => 'ASC',
+                'posts_per_page' => -1
+            ));
+            
+            if ($testimonial_list) :
+                foreach ($testimonial_list as $testimonial) :
+                    $post_id = $testimonial->ID;
+                ?>
+                    <div class="col-lg-6">
+                        <div class="testimonial-content">
+                            <span class="icon"><img width="84" height="72" src="<?php echo home_url(); ?>/wp-content/themes/lucky-duct/assets/images/quote-icon.svg" alt="Quote"></span>
+                            <div class="testimonial-text" data-simplebar="init">
+                                <p>
+                                    <?php echo $testimonial->post_content; ?>                                
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h5 class="testimonial-name"><?php echo $testimonial->post_title; ?> , <span><?php the_field('social_media',$post_id); ?></span></h5>
+                                <ul class="star">
+                                    <li><img width="15" height="14" src="<?php echo home_url(); ?>/wp-content/themes/lucky-duct/assets/images/star.svg" alt="Star"></li>
+                                    <li><img width="15" height="14" src="<?php echo home_url(); ?>/wp-content/themes/lucky-duct/assets/images/star.svg" alt="Star"></li>
+                                    <li><img width="15" height="14" src="<?php echo home_url(); ?>/wp-content/themes/lucky-duct/assets/images/star.svg" alt="Star"></li>
+                                    <li><img width="15" height="14" src="<?php echo home_url(); ?>/wp-content/themes/lucky-duct/assets/images/star.svg" alt="Star"></li>
+                                    <li><img width="15" height="14" src="<?php echo home_url(); ?>/wp-content/themes/lucky-duct/assets/images/star.svg" alt="Star"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                endforeach;
+            endif;
+            ?>
+           
+           
+        </div>
+    </div>
+</section>
+<!-- End of Testimonial -->

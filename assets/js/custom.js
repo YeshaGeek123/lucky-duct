@@ -82,26 +82,23 @@ jQuery(document).ready(function($) {
         ]
     });
 
-    jQuery('.review-slider').slick({
-        slidesToShow: 3,
+    jQuery('.testimonial-slider').slick({
+        slidesToShow: 2,
         slidesToScroll: 1,
         rows: 0,
         infinite: true,
+        swipeToSlide: true,
         dots: false,
-        arrows: true,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 2000,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
         responsive: [{
             breakpoint: 992,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: true,
+                arrows: false,
                 dots: false,
-                autoplay: true,
-                autoplaySpeed: 2000,
             }
         }]
     });

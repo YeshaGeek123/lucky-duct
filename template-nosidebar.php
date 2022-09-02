@@ -4,17 +4,17 @@
  */
   get_header();
 ?>
-<section class="main-banner inner-banner" style=" background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2020/05/InteriorHeaderImage.jpg');">
+<section class="main-banner inner-banner bg-img" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/09/leaf-back-img.png');">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9">
-                <div class="banner-text">
-                    <h1 class="h1-title"><?php the_title(); ?></h1>
+            <div class="col-lg-12">
+                <div class="banner-content text-center">
+                    <h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.1s"><?php the_title(); ?></h1>
                 </div>
             </div>
         </div>
     </div>
-</section><!-- emd of main-banner -->
+</section><!-- emd of main-banner -->   
 
 <div class="inner-page-text">
     <div class="container">
