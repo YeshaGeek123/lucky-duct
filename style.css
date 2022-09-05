@@ -1615,7 +1615,7 @@ a:hover {
     float: none;
     width: 280px;
     background: var(--white-color);
-    box-shadow: 0 0 10px rgb(60 140 244 / 15%);
+    box-shadow: 0 0 10px rgba(60, 140, 244, 0.15);
     text-align: left;
     display: none;
     opacity: 0;
@@ -1786,7 +1786,7 @@ a:hover {
     background: var(--white-color);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 20px 30px rgb(60 140 244 / 16%);
+    box-shadow: 0 20px 30px rgba(60, 140, 244, 0.16);
 }
 
 .popup-title {
@@ -1946,8 +1946,8 @@ button.close:hover {
 .slick-arrow::before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     top: 50%;
     left: 50%;
     border: 2px solid var(--white-color);
@@ -2206,7 +2206,7 @@ button.close:hover {
 
 .main-banner {
     position: relative;
-    padding: 222px 0 405px;
+    padding: 222px 0 406px;
     background-position: 0 80px;
 }
 
@@ -2280,7 +2280,9 @@ button.close:hover {
 }
 
 .about-content {
+    position: relative;
     padding: 0 100px 0 0;
+    left: -11px;
 }
 
 
@@ -2349,6 +2351,7 @@ button.close:hover {
 
 .service-row.even .service-content .h3-title {
     color: var(--yellow-color);
+    margin-bottom: 19px;
 }
 
 .service-row.even .service-content .sec-btn {
@@ -2362,7 +2365,7 @@ button.close:hover {
 
 .service-content p {
     height: 123px;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
@@ -2379,7 +2382,7 @@ button.close:hover {
 }
 
 .service-row.even .service-content {
-    padding: 65px 0 0 100px;
+    padding: 53px 0 0 100px;
 }
 
 .service-img-wp {
@@ -2464,7 +2467,7 @@ button.close:hover {
 
 .lucky-bucks-sec {
     position: relative;
-    padding: 54px 0 58px;
+    padding: 54px 0 28px;
     background: -moz-linear-gradient(-45deg, rgba(12, 105, 51, 1) 0%, rgba(42, 42, 42, 1) 100%);
     background: -webkit-linear-gradient(-45deg, rgba(12, 105, 51, 1) 0%, rgba(42, 42, 42, 1) 100%);
     background: -o-linear-gradient(-45deg, rgba(12, 105, 51, 1) 0%, rgba(42, 42, 42, 1) 100%);
@@ -2483,7 +2486,7 @@ button.close:hover {
 
 .lucky-buck-content .h2-title {
     color: var(--yellow-color);
-    margin-bottom: 11px;
+    margin-bottom: 12px;
 }
 
 .coupon-text {
@@ -2586,7 +2589,7 @@ button.close:hover {
 
 .testimonial-sec {
     position: relative;
-    padding: 81px 0 100px;
+    padding: 81px 0 111px;
 }
 
 .testimonial-sec .h2-title {
@@ -2763,7 +2766,7 @@ button.close:hover {
 
 .social-link {
     border-bottom: 1px solid rgba(96, 96, 96, 0.2);
-    padding-bottom: 43px;
+    padding-bottom: 40px;
     margin-bottom: 33px;
 }
 
@@ -2781,7 +2784,7 @@ button.close:hover {
 }
 
 .client li:last-child {
-    margin-right: 0;
+    margin: 0;
 }
 
 .footer-content {
@@ -2790,7 +2793,7 @@ button.close:hover {
 
 .footer-bottom-box {
     position: relative;
-    padding: 52px 0 73px;
+    padding: 52px 0 74px;
     background: var(--black-color);
 }
 
@@ -2874,7 +2877,7 @@ button.close:hover {
 }
 
 .footer-menu {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 }
 
 
@@ -3035,12 +3038,21 @@ button.close:hover {
 .main-service-sec .service-content .call-details {
     color: var(--dark-color);
     font-weight: bold;
+    transition: .3s;
+}
+
+.main-service-sec .service-content .call-details:hover {
+    color: var(--primary-color);
 }
 
 .main-service-sec .service-row.even {
     background-color: #F5F5F5;
     margin: 0;
     padding: 94px 0 85px;
+}
+
+.main-service-sec .service-row.odd .service-content .list {
+    margin-bottom: 26px;
 }
 
 .main-service-sec .service-row.even .service-wp {
@@ -3094,9 +3106,11 @@ button.close:hover {
     margin-bottom: -28px;
 }
 
-.filter-content .icon img {
+.filter-content .icon .bg-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
     position: relative;
-    z-index: 1;
 }
 
 .filter-content .icon::before {
@@ -3149,6 +3163,11 @@ button.close:hover {
     transition: .3s;
 }
 
+.faq-box h3:hover {
+    background: var(--yellow-color);
+    color: var(--primary-color);
+}
+
 .faq-box h3.active-faq {
     color: var(--primary-color);
     background: var(--yellow-color);
@@ -3176,6 +3195,14 @@ button.close:hover {
     background: #f5f5f5;
     border: 1px solid #DBDBDB;
     padding: 23px 30px 33px;
+}
+
+.faq-content .faq-text p {
+    margin-bottom: 32px;
+}
+
+.faq-content .faq-text p:last-child {
+    margin-bottom: 0;
 }
 
 .main-contact-sec {
@@ -3243,6 +3270,11 @@ button.close:hover {
     background: linear-gradient(135deg, rgba(12, 105, 51, 0.8) 0%, rgba(42, 42, 42, 1) 100%);
 }
 
+.main-lucky-sec .h3-title {
+    color: var(--yellow-color);
+    margin-bottom: 32px;
+}
+
 .main-lucky-sec .img {
     top: 50%;
     transform: translate(0, -50%);
@@ -3254,6 +3286,10 @@ button.close:hover {
 
 .lucky-buck-content .img-wp {
     margin-bottom: 20px;
+}
+
+.lucky-buck-content .img-wp a {
+    display: inline-block;
 }
 
 .inner-page-text {
@@ -3888,9 +3924,30 @@ a.prev.page-numbers {
     .container {
         max-width: 1400px;
     }
+    .about-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .about-img {
+        width: 950px;
+        right: 198px;
+    }
+    .service-title-sec {
+        margin-top: -354px;
+        padding: 430px 0 305px;
+    }
+    .lucky-buck-img-wp {
+        margin: -84px 0 0;
+    }
 }
 
-@media screen and (max-width: 1499px) {}
+@media screen and (max-width: 1499px) {
+    .main-service-sec .service-icon {
+        right: -30px;
+    }
+}
 
 @media screen and (max-width: 1199px) {
     .about-img {
@@ -3898,6 +3955,7 @@ a.prev.page-numbers {
     }
     .about-content {
         padding: 20px 30px 20px 0;
+        left: 0;
     }
     .lucky-buck-img-wp {
         margin: 40px 0 0;
@@ -3907,6 +3965,15 @@ a.prev.page-numbers {
     }
     .footer-content {
         padding: 76px 0 31px 0;
+    }
+    .main-service-sec .service-row.even .service-content,
+    .main-service-sec .service-content {
+        padding: 0;
+    }
+    .main-service-sec .service-row.even .service-img-wp,
+    .main-service-sec .service-img-wp {
+        width: 100%;
+        right: 0;
     }
 }
 
@@ -4141,7 +4208,7 @@ a.prev.page-numbers {
         margin-bottom: 17px;
     }
     .about-content {
-        padding: 0 15px 41px 0;
+        padding: 0 0 41px 0;
     }
     .h2-title {
         font-size: 38px;
@@ -4170,6 +4237,9 @@ a.prev.page-numbers {
     }
     .service-content .h3-title {
         margin-bottom: 10px;
+    }
+    .service-row.even .service-content .h3-title {
+        margin-bottom: 11px;
     }
     .service-content p {
         height: auto;
@@ -4271,8 +4341,15 @@ a.prev.page-numbers {
     .testimonial-sec {
         padding: 18px 0 45px;
     }
+    .testimonial-content {
+        padding: 0 10px 16px 30px;
+    }
+    .testimonial-author {
+        padding: 0;
+    }
     .testimonial-text {
         height: 200px;
+        margin: -22px 0 26px;
     }
     .top-footer::before {
         display: none;
@@ -4311,6 +4388,101 @@ a.prev.page-numbers {
     .footer-bottom-box {
         padding: 38px 0 80px;
     }
+    .main-banner.inner-banner {
+        padding: 119px 0 23px;
+    }
+    .main-service-sec .service-row.even .service-img-wp,
+    .main-service-sec .service-img-wp {
+        height: 400px;
+        margin-bottom: 19px;
+    }
+    .main-service-sec .service-row.odd {
+        padding: 70px 0 63px;
+    }
+    .main-service-sec .service-row.even {
+        padding: 71px 0 65px;
+    }
+    .main-service-sec .service-content {
+        margin: 0;
+    }
+    .main-service-sec .service-content p:last-child {
+        margin: 0;
+    }
+    .main-service-sec .service-row.even .service-content .h3-title {
+        margin-bottom: 11px;
+    }
+    .main-service-sec .service-row.even .service-content p {
+        margin-bottom: 13px;
+    }
+    .list {
+        margin: 17px 0 0;
+    }
+    .filter-content {
+        height: auto;
+        margin-bottom: 90px;
+        padding: 0 30px 24px;
+    }
+    .filter-sec {
+        padding: 60px 0 0;
+    }
+    .filter-sec .h3-title {
+        margin-bottom: 83px;
+    }
+    .h4-title {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .filter-content .icon {
+        margin-bottom: -40px;
+    }
+    .filter-content .h4-title {
+        margin-bottom: 11px;
+    }
+    .resources-sec {
+        padding: 60px 0 43px;
+    }
+    .resource-content .h3-title {
+        margin-bottom: 18px;
+    }
+    .resource-content p {
+        margin-bottom: 21px;
+    }
+    .main-contact-sec {
+        padding: 60px 0 69px;
+    }
+    .main-contact-sec .contact-form {
+        margin-bottom: 20px;
+    }
+    .contact-content {
+        padding: 0;
+        text-align: center;
+    }
+    .faq-sec {
+        padding: 61px 0 43px;
+    }
+    .main-lucky-sec {
+        padding: 60px 0 40px;
+    }
+    .main-lucky-sec .lucky-buck-content {
+        margin-bottom: 30px;
+    }
+    .main-lucky-sec .h3-title {
+        margin-bottom: 22px;
+    }
+    .lucky-buck-content .img-wp a img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .lucky-buck-content .img-wp a {
+        display: block;
+    }
+    .inner-page-text {
+        padding: 60px 0;
+    }
+    .faq-content .faq-text p {
+        margin-bottom: 12px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -4327,10 +4499,6 @@ a.prev.page-numbers {
     }
     .about-img {
         right: 40px;
-    }
-    .service-title-sec {
-        margin: -490px 0 0;
-        padding: 548px 0 361px;
     }
 }
 
@@ -4365,8 +4533,8 @@ a.prev.page-numbers {
         margin-bottom: 10px;
     }
     .h1-title {
-        font-size: 50px;
-        line-height: 70px;
+        font-size: 46px;
+        line-height: 66px;
         margin-bottom: 8px;
     }
     .banner-btn .sec-btn+.sec-btn {
@@ -4374,7 +4542,7 @@ a.prev.page-numbers {
         margin: 20px auto 0;
     }
     .main-banner {
-        padding: 180px 0 402px;
+        padding: 180px 0 222px;
     }
     .about-img {
         width: 500px;
@@ -4384,7 +4552,7 @@ a.prev.page-numbers {
         padding: 0 0 60px;
     }
     .service-title-sec {
-        padding: 538px 0 361px;
+        padding: 48px 0 361px;
     }
     .service-row.even .service-img-wp,
     .service-img-wp {
@@ -4400,7 +4568,7 @@ a.prev.page-numbers {
         margin-top: -127px;
     }
     .lucky-bucks-sec {
-        padding: 48px 0 17px;
+        padding: 48px 0 0;
     }
     .lucky-buck-img-wp {
         left: -40px;
@@ -4413,6 +4581,83 @@ a.prev.page-numbers {
     }
     .contact-form {
         padding: 50px 0 60px;
+    }
+    .footer-menu li {
+        display: block;
+        margin: 0 0 15px;
+        padding: 0;
+        border: 0;
+    }
+    .footer-menu li:last-child {
+        margin-bottom: 0;
+    }
+    .footer-bottom-link ul li:first-child {
+        display: block;
+        border: 0;
+        padding: 0;
+        margin: 0 0 10px;
+    }
+    .footer-other-link p a {
+        display: block;
+    }
+    .client ul {
+        display: block;
+    }
+    .client li {
+        margin: 0 0 25px;
+    }
+    .social-link li a.phone {
+        font-size: 32px;
+        line-height: 53px;
+    }
+    .main-service-sec .service-row.even .service-img-wp,
+    .main-service-sec .service-img-wp {
+        height: 300px;
+    }
+    .main-service-sec .service-icon {
+        width: 130px;
+        height: 130px;
+        top: -15px;
+        right: -15px;
+    }
+    .main-service-sec .service-icon::before {
+        width: 110px;
+        height: 110px;
+    }
+    .main-service-sec .service-icon img {
+        width: 70px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .main-service-sec .service-row.odd {
+        padding: 60px 0 54px;
+    }
+    .main-service-sec .service-row.even {
+        padding: 61px 0 55px;
+    }
+    .filter-sec {
+        padding: 50px 0 0;
+    }
+    .h3-title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .resources-sec {
+        padding: 50px 0 29px;
+    }
+    .main-contact-sec {
+        padding: 51px 0 59px;
+    }
+    .faq-sec {
+        padding: 51px 0 33px;
+    }
+    .faq-box h3 {
+        padding: 10px 50px 10px 25px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .faq-content {
+        padding: 23px 25px 33px;
     }
 }
 
@@ -4443,6 +4688,10 @@ a.prev.page-numbers {
     .form-input.wpcf7-textarea {
         padding: 15px;
     }
+    select,
+    select.form-input {
+        padding-right: 25px;
+    }
     .form-element i {
         right: 10px;
     }
@@ -4452,6 +4701,49 @@ a.prev.page-numbers {
     .common-popup-text {
         padding: 20px 15px !important;
         max-height: 75vh;
+    }
+    .about-img {
+        width: 350px;
+        right: 36px;
+    }
+    .service-row.even .service-img-wp,
+    .service-img-wp {
+        height: 280px;
+    }
+    .service-row.even .service-content {
+        padding: 0 0 50px 15px;
+    }
+    .testimonial-content {
+        padding: 0 10px 16px 15px;
+    }
+    .testimonial-author {
+        display: block;
+    }
+    .testimonial-author .testimonial-name {
+        margin-bottom: 12px;
+    }
+    .lucky-buck-img-wp {
+        margin: 20px 0 0;
+        left: -20px;
+    }
+    .main-service-sec .service-row.even .service-img-wp,
+    .main-service-sec .service-img-wp {
+        height: 280px;
+    }
+    .filter-content {
+        padding: 0 15px 24px;
+    }
+    .faq-box h3 {
+        padding: 10px 30px 10px 15px;
+    }
+    .faq-box h3 span {
+        right: 15px;
+    }
+    .faq-content {
+        padding: 19px 15px 24px;
+    }
+    .main-lucky-sec {
+        padding: 51px 0 30px;
     }
 }
 

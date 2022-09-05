@@ -67,7 +67,7 @@
 									while(have_rows('brand_logo','options')): the_row();
 								?>
 								<li>
-									<a href="<?php the_sub_field('footer_brand_logo_link'); ?>"  title="Contact Us" target="_blank"><img width="100" height="85" src="<?php the_sub_field('footer_brand_logo'); ?>"></a>
+									<a href="<?php the_sub_field('footer_brand_logo_link'); ?>"  title="Contact Us" target="_blank"><img width="100" height="85" src="<?php the_sub_field('footer_brand_logo'); ?>" alt="Brand Logo"></a>
 								</li>
 								<?php
 									endwhile;
